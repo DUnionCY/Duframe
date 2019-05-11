@@ -1,5 +1,4 @@
-/** DUframe By DUnionTeam **/
-/** DUframe ver 19.0.9.0 **/
+/** DUframe 0.9.1 GPL-3.0 License By DUnionTeam **/
 *{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;text-decoration:none;outline-style:none;/*FF*/ }
 .text-align{
 	text-align:center;
@@ -16,11 +15,15 @@
 	width:100%;
 	line-height:70px;
 	background:#000;
-	box-shadow:0 1px 11px 0px #8a8a8a;
+	-webkit-box-shadow:0 1px 11px 0px #8a8a8a;
+	        box-shadow:0 1px 11px 0px #8a8a8a;
 }
 .duframe-app .mainContent{
+	display:-webkit-box;
+	display:-ms-flexbox;
 	display:flex;
-	flex-wrap:wrap;
+	-ms-flex-wrap:wrap;
+	    flex-wrap:wrap;
 	background-color: #f3f3f3;
 	left:0;
 	top:0;
@@ -36,7 +39,8 @@
 	padding-left:25px;
 	background-color: #FFF;
 	line-height: 60px;
-	box-shadow:0 1px 11px 0px #8a8a8a;
+	-webkit-box-shadow:0 1px 11px 0px #8a8a8a;
+	        box-shadow:0 1px 11px 0px #8a8a8a;
 }
 .duframe-admin .nav-logo{
 	width:100%;
@@ -63,10 +67,17 @@
 }
 .duframe-admin .mainContent{
 	position: absolute;
+	display:-webkit-box;
+	display:-ms-flexbox;
 	display:flex;
-	flex-wrap:wrap;
-	justify-content:space-between;
-	transition-duration:.5s;
+	-ms-flex-wrap:wrap;
+	    flex-wrap:wrap;
+	-webkit-box-pack:justify;
+	    -ms-flex-pack:justify;
+	        justify-content:space-between;
+	-webkit-transition-duration:.5s;
+	     -o-transition-duration:.5s;
+	        transition-duration:.5s;
 	background-color: #f3f3f3;
 	left:200px;
 	top:60px;
@@ -79,9 +90,14 @@
 	.duframe-app .mainContent .area-1,.area-2,.area-3,.area-4{
 		padding:30px 2% 10px 2%;
 		margin:0 auto;
+		display:-webkit-box;
+		display:-ms-flexbox;
 		display:flex;
-		flex-wrap:wrap;
-		justify-content:space-between;
+		-ms-flex-wrap:wrap;
+		    flex-wrap:wrap;
+		-webkit-box-pack:justify;
+		    -ms-flex-pack:justify;
+		        justify-content:space-between;
 	}
 	.duframe-app .mainContent .area-1{
 		width:100%;
@@ -146,14 +162,20 @@
 	}
 	.duframe-admin .header{
 		left:200px;
+		-webkit-transition:left 0.5s;
+		-o-transition:left 0.5s;
 		transition:left 0.5s;
 	}
 	.duframe-admin .nav{
 		left:0px;
+		-webkit-transition:left 0.5s;
+		-o-transition:left 0.5s;
 		transition:left 0.5s;
 	}
 	.duframe-admin .mainContent{
 		left:200px;
+		-webkit-transition:left 0.5s;
+		-o-transition:left 0.5s;
 		transition:left 0.5s;
 	}
 }
@@ -175,14 +197,20 @@
 	/*后*/
 	.duframe-admin .header{
 		left:0;
+		-webkit-transition:left 0.5s;
+		-o-transition:left 0.5s;
 		transition:left 0.5s;
 	}
 	.duframe-admin .nav{
 		left:-200px;
+		-webkit-transition:left 0.5s;
+		-o-transition:left 0.5s;
 		transition:left 0.5s;
 	}
 	.duframe-admin .mainContent{
 		left:0;
+		-webkit-transition:left 0.5s;
+		-o-transition:left 0.5s;
 		transition:left 0.5s;
 	}
 	.duframe-admin .col-1,.col-1,.col-2,.col-3,.col-4,.col-5,.col-6 {
@@ -204,6 +232,8 @@
 	height:40px;
 	line-height:40px;
 	padding-left:5%;
+	-webkit-transition:border-left 0.1s;
+	-o-transition:border-left 0.1s;
 	transition:border-left 0.1s;
 }
 .duframe-admin .ul-click{
@@ -307,6 +337,8 @@
 }
 .table>tbody>tr:hover,.table-1>tbody>tr:hover{
 	background:#e6e6e670;
+	-webkit-transition:background 0.5s;
+	-o-transition:background 0.5s;
 	transition:background 0.5s;
 }
 
@@ -389,16 +421,28 @@ pre{
     top: 0;
     left: 0;
     pointer-events: none;
+    background-image: -webkit-radial-gradient(circle, #666 10%, transparent 10.01%);
+    background-image: -o-radial-gradient(circle, #666 10%, transparent 10.01%);
     background-image: radial-gradient(circle, #666 10%, transparent 10.01%);
     background-repeat: no-repeat;
     background-position: 50%;
-    transform: scale(10, 10);
+    -webkit-transform: scale(10, 10);
+        -ms-transform: scale(10, 10);
+            transform: scale(10, 10);
     opacity: 0;
+    -webkit-transition: opacity .5s, -webkit-transform .3s;
+    transition: opacity .5s, -webkit-transform .3s;
+    -o-transition: transform .3s, opacity .5s;
     transition: transform .3s, opacity .5s;
+    transition: transform .3s, opacity .5s, -webkit-transform .3s;
 }
 .btn:active:after {
-    transform: scale(0, 0);
+    -webkit-transform: scale(0, 0);
+        -ms-transform: scale(0, 0);
+            transform: scale(0, 0);
     opacity: .3;
+    -webkit-transition: 0s;
+    -o-transition: 0s;
     transition: 0s;
 }
 .btn-group{
@@ -436,8 +480,12 @@ pre{
 	font-size:10px;
 }
 .progress-striped {
+	background-image:-webkit-linear-gradient(315deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+	background-image:-o-linear-gradient(315deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
 	background-image:linear-gradient(135deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent); 
 	background-size: 40px 40px;
+	-webkit-transition: width .6s ease;
+	-o-transition: width .6s ease;
 	transition: width .6s ease;
 }
 @-webkit-keyframes per-animation{
@@ -488,13 +536,14 @@ pre{
 .tips{
 	display:block;
 	width:96%;
-	background:#d7f3ff;
+	background:#ebf9ff;
 	border-left:solid #03a9f4 6px;
 	margin-left:2%;
 	margin-right:2%;
 	margin-top:10px;
 	margin-bottom:10px;
-	box-shadow: 0 5px 5px #888888;
+	-webkit-box-shadow: 0 2px 5px #e4e4e4;
+	        box-shadow: 0 2px 5px #e4e4e4;
 }
 .tips>span{
 	font-size:0.8em;
@@ -506,10 +555,37 @@ pre{
 	border-left:solid #ff4c4c 6px;
 }
 .tips-success {
-	background:#d2ffd4;
+	background:#ebffec;
 	border-left:solid #32e63a 6px;
 }
 .tips-warm {
-	background:#ffe9c9;
+	background:#fff6e9;
 	border-left:solid #ffb342 6px;
+}
+.tips-disabled {
+	background:#e6e6e6;
+	border-left:solid #bbbbbb 6px;
+}
+.tips-1,.tips-danger-1,.tips-success-1,.tips-warm-1{
+	border-left:solid #fff 6px;
+	-webkit-box-shadow: 0 0 3px -1px #000;
+	        box-shadow: 0 0 3px -1px #000;
+}
+.tips-1,.tips-danger-1,.tips-success-1,.tips-warm-1>span{
+	color:#fff;
+}
+.tips-1{
+	background:#21b8f8;
+}
+.tips-danger-1 {
+	background:#ff2a2a;
+}
+.tips-success-1 {
+	background:#6cca84;
+}
+.tips-warm-1 {
+	background:#ff6528;
+}
+.tips-disabled-1 {
+	background:#ff6528;
 }
