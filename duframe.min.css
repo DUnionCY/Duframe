@@ -1,9 +1,9 @@
-/** DUframe 0.9.1 GPL-3.0 License By DUnionTeam **/
-*{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;text-decoration:none;outline-style:none;/*FF*/ }
+/** DUframe 0.9.2 GPL-3.0 License By DUnionTeam **/
+*{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;text-decoration:none;outline-style:none;font-family: sans-serif;font-style: none;list-style-type:none;text-decoration:none;}
 .text-align{
 	text-align:center;
 }
-/*前*/
+/*前-css样式代码*/
 .duframe-app,.duframe-admin{
 	position: absolute;
 	top:0;
@@ -12,13 +12,43 @@
 	bottom:0;
 }
 .duframe-app .header{
+	z-index: 559;
+	display:-webkit-box;
+	display:-ms-flexbox;
+	display:flex;
+	position: relative;
 	width:100%;
 	line-height:70px;
-	background:#000;
+	background:#fff;
 	-webkit-box-shadow:0 1px 11px 0px #8a8a8a;
 	        box-shadow:0 1px 11px 0px #8a8a8a;
 }
+.duframe-app .header .header-list{
+	float: left;
+}
+.duframe-app .header .header-list .header-nav{
+	float: left;
+	margin-left: 15px;
+}
+.duframe-app .header .header-list .header-nav span{
+	display: block;
+	float: left;
+	line-height: 70px;
+	margin-left: 15px;
+}
+.duframe-app .header .header-list .header-nav span a{
+	color: #000;
+}
+.duframe-app .header .header-list .header-logo{
+	float: left;
+	background: url(../images/logo.png) no-repeat;
+	height: 70px;
+	width: 260px;
+	background-size:260px 70px;
+}
+
 .duframe-app .mainContent{
+	position: relative;
 	display:-webkit-box;
 	display:-ms-flexbox;
 	display:flex;
@@ -42,6 +72,7 @@
 	-webkit-box-shadow:0 1px 11px 0px #8a8a8a;
 	        box-shadow:0 1px 11px 0px #8a8a8a;
 }
+
 .duframe-admin .nav-logo{
 	width:100%;
 	height:60px;
@@ -134,7 +165,7 @@
 	}
 	.duframe-app .col-6 {
 		width:8%;
-	}	
+	}
 	/*后*/
 	.duframe-admin .col-1,.col-1,.col-2,.col-3,.col-4,.col-5,.col-6 {
 		background:#fff;
@@ -482,7 +513,7 @@ pre{
 .progress-striped {
 	background-image:-webkit-linear-gradient(315deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
 	background-image:-o-linear-gradient(315deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
-	background-image:linear-gradient(135deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent); 
+	background-image:linear-gradient(135deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
 	background-size: 40px 40px;
 	-webkit-transition: width .6s ease;
 	-o-transition: width .6s ease;
@@ -498,7 +529,7 @@ pre{
 		}
 	}
 .progress-striped-active {
-	-webkit-animation:per-animation 1.5s linear infinite; 
+	-webkit-animation:per-animation 1.5s linear infinite;
 }
 /*
 	徽章
@@ -566,12 +597,12 @@ pre{
 	background:#e6e6e6;
 	border-left:solid #bbbbbb 6px;
 }
-.tips-1,.tips-danger-1,.tips-success-1,.tips-warm-1{
+.tips-1,.tips-danger-1,.tips-success-1,.tips-warm-1,.tips-disabled-1{
 	border-left:solid #fff 6px;
 	-webkit-box-shadow: 0 0 3px -1px #000;
 	        box-shadow: 0 0 3px -1px #000;
 }
-.tips-1,.tips-danger-1,.tips-success-1,.tips-warm-1>span{
+.tips-1,.tips-danger-1,.tips-success-1,.tips-warm-1,.tips-disabled-1>span{
 	color:#fff;
 }
 .tips-1{
@@ -587,5 +618,6 @@ pre{
 	background:#ff6528;
 }
 .tips-disabled-1 {
-	background:#ff6528;
+	color:#fff;
+	background:#b9b9b9;
 }
